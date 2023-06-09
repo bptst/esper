@@ -1,0 +1,561 @@
+.close{
+  margin-right: 10px;
+  border: none;
+  background: no-repeat;
+  color: white;
+  text-shadow: 0px 0px 10px #00ff10;
+  font-size: 20px;
+
+}
+@font-face {
+  font-family: 'CD-Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('CD-Icons'), url('src/Icons-Regular.ttf') format('woff');
+}
+.intro_text{
+  margin-top: 30px;}
+
+.close:hover{
+  scale: 1.1;
+  rotate: 90deg;
+}
+.title{
+  color: white;
+  text-shadow: 0px 0px 20px #00ff10;
+  font-size: 66px;
+  height: 69px;  
+}
+p{
+  font-family: Space Grunge;
+
+}
+.terminal{
+  left: 525px;
+  top: 500px;
+}
+.project{
+  left: 750px;
+  top: 400px;
+
+
+}
+.secret{
+  left: 900px;
+  top: 500px;
+
+
+}
+
+#secret{
+  width: 308px;
+  height: 204px;
+  left: 800px;
+  top: 200px;
+
+}
+#terminal{
+  width: 478px;
+height: 304px;
+}
+.tapping_zone{
+  margin-right: 10px;
+border: none;
+background: no-repeat;  color: #ffacac;
+  text-shadow: 0px 0px 10px #ff0f0f;  
+color: white;
+text-shadow: 0px 0px 10px #00ff10;
+font-family: Space Grunge;
+width: 100%;
+position: absolute;
+bottom: 0;
+display: flex;
+margin-left: 10px;
+}
+.command_style{
+  color: #ffacac;
+  text-shadow: 0px 0px 10px #ff0f0f;  
+}
+.first_view{
+  z-index: 9999 !important;
+}
+#terminal_input{
+  border: none;
+  background: no-repeat;
+  color: #ffacac;
+  width: 80%;
+  font-size: 100%;
+  height: 20px;
+  bottom: 0;
+  position: absolute;
+  left: 85px;
+  letter-spacing: 1px;
+  outline: none;
+  color:transparent;
+
+
+}
+.pre_tapping{
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+textarea{
+  resize: none;
+  cursor: none;
+}
+#terminal_window{
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  text-shadow: 0px 0px 10px #00ff10;
+  color: white;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.title_header{
+  color: white;
+  text-shadow: 0px 0px 20px #00ff10;
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 10px;
+  pointer-events: none;
+
+}
+.psw_result{
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Space Grunge;
+  color: #dbf6dd;
+  text-shadow: 0px 0px 10px #00ff10;
+  padding: 10px;
+  position: absolute;
+  top: 159px;
+  left: 78px;
+}
+#password_input{
+  background: no-repeat;
+  font-family: Space Grunge;
+  font-size: 40px;
+  height: 40px;
+  outline: none;
+  width: 190px;
+  letter-spacing: 8px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 2px #00ff10;
+  border: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: white;
+  color: transparent;
+  background-color: #3095375c;
+  margin-bottom: 4px;
+  
+
+
+}
+#password_input:focus{
+  background-color: #00ff105c;
+  border-width: 3px;
+  margin-bottom: 0px !important;
+}
+.selection{
+  background-color: #00ff1024;
+  position: absolute;
+  box-shadow: 0px 0px 10px 2px #00ff10;
+  border: solid;
+  border-color: white;
+  opacity: 0;
+  pointer-events: none;
+  border-width: 2px;
+  z-index: 2;
+
+}
+.header{
+  background-color: rgb(29, 41, 29);
+  width: 100%;
+  border-bottom: solid;
+  border-color:  rgb(170, 252, 172);
+  border-width: 1px;
+  display: flex;
+  justify-content: space-between; 
+  background-color: #25462300;
+}
+.open{
+background-color: #00ff10;
+transform: scale(1) !important;
+}
+.content{
+  display: grid;
+justify-content: center;
+gap: 40px;
+letter-spacing: 1px;
+
+}
+.anim_typing{
+  animation: typing 1s steps(20, end);
+
+}
+.flair{
+  box-shadow: 0px 0px 40px 20px #00ff10;
+  position: absolute;
+margin-top: 50%;
+z-index: 1;
+}
+.random{
+  margin-right: 10px;
+border: none;
+background: no-repeat;
+color: white;
+text-shadow: 0px 0px 10px #00ff10;
+font-family: Space Grunge;
+font-size: 30px;
+border: solid;
+border-width: 1px;
+box-shadow: 0px 0px 10px 2px #00ff10;
+border-radius: 3px;
+}
+.random:hover{
+  background-color: #00ff105c;
+}
+.random:active{
+  background-color: #0000005c;
+}
+.popup{
+  transition: transform .2s ease-in-out;
+  position: absolute;
+  border: solid;
+  border-color: rgb(170, 252, 172);
+  box-shadow: 0px 0px 10px 2px #00ff10;
+  background-color: rgb(19, 40, 20);
+  z-index: 9;
+  transform: scale(0);
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.infos{
+  left:400px;
+  top: 500px;
+}
+
+#infos{
+  top:140px;
+  left:320px;
+  width: 627px;
+height: 320px;
+}
+
+#color{
+  width:230px;
+  height: 180px;
+  top:200px;
+  left:700px;
+}
+#terminal{
+  left:500px;
+  top:50px;
+}
+.color{
+  left: 650px;
+  top: 500px;
+}
+.small{
+  font-size: 20px !important;
+}
+.selected{
+  border: solid;
+
+  border-color: white;
+border-width: 1px;
+border-radius: 4px;
+box-shadow: 0px 0px 10px 2px #00ff10;
+background-color: #00ff1024;
+padding: 4px !important;
+
+}
+.file{
+
+  color: white;
+font-family: CD-Icons;
+font-size: 70px;
+text-shadow: 0px 0px 10px #00ff10;
+}
+.file_name{
+top: 45px;
+position: absolute;
+font-family: Space Grunge;
+color: #dbf6dd;
+text-shadow: 0px 0px 10px #00ff10;
+
+}
+html{
+  height: 100%;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+
+}
+.icon{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+justify-content: center;
+border-width: 1px;
+border-radius: 4px;
+padding: 5px;
+
+
+}
+.color_slider{
+  box-shadow: 0px 0px 10px 2px #3c92f4;
+  filter: hue-rotate(260deg);
+  height: 8px;
+  margin-top: 40px;
+  
+}
+@font-face {
+    font-family: 'Space Grunge';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Space Grunge'), url('https://fonts.cdnfonts.com/s/32064/Space Grunge.woff') format('woff');
+}
+.cursor_text{
+  padding-right: 3px;
+  border-right: solid;
+  border-right-color: currentcolor;
+  border-right-width: medium;
+border-color: white;
+border-width: 0px;
+height: 20px;
+margin-left: 100px;
+color: #ffacac;
+text-shadow: 0px 0px 10px #ff0f0f;
+
+
+font-family: Space Grunge;
+  font-size: 100%;
+  height: 20px;
+  letter-spacing: 1px;
+  animation: blink-caret .75s step-end infinite;
+}
+
+.cursor_text_focus{
+  border-width: 10px;
+
+
+
+}
+.typing{
+  overflow: hidden;
+white-space: nowrap;
+animation: typing 1s steps(20, end);
+font-family: Space Grunge;
+color: #dbf6dd;
+text-shadow: 0px 0px 10px #00ff10;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top: -10px;
+margin-bottom: -10px;
+padding-left: 10px;
+margin-left: -10px;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+@keyframes img_blink{
+  from, to {   filter: grayscale(1) brightness(4);
+  }
+  10% {  filter: grayscale(1) brightness(3);
+  }
+  30% {  filter: grayscale(1) brightness(2);
+  }
+  50% {   filter: grayscale(1) brightness(2.3);
+  }
+  97% {   filter: grayscale(1) brightness(1.8);
+  }
+  100% {   filter: grayscale(1) brightness(4);
+  }
+}
+
+
+
+
+
+.fenetre{
+  width: 1920px;
+  height: 1080px;
+  background-color: red;
+  background-color: #090909;
+  
+
+}
+
+
+
+.follow{
+  position: absolute;
+width: 100%;
+pointer-events:none;
+height: 100%;
+z-index: 999999;
+
+}
+
+.follow_up{
+width: 2px;
+height: 800px;
+position: absolute;
+top: 10px;
+
+}
+.reference{
+  position: absolute;
+}
+
+.follow_asset{
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px #00ff10;
+
+}
+.filter_green{
+  position: absolute;
+top: 0px;
+left: 0;
+background-color: #00800054;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+.filter_img{
+  z-index: -10;
+  z-index: -10;
+  filter: grayscale(1) brightness(3);
+  width: 100%;
+  animation: 2.5s linear 0.5s infinite running img_blink;
+}
+
+#img01{
+  top: 60px;
+  left: 785px;
+  width: 800px;;
+}
+.img01{
+  top: 260px;
+  left: 1000px;
+
+}
+.coord_x{
+  color: white;
+  margin-left: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 10px #00ff10;
+}
+.coord_x_selection{
+  color: white;
+  margin-top: -24px;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 10px #00ff10;
+}
+.coord_y_selection{
+  color: white;
+  margin-top: -24px;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 10px #00ff10;
+}
+
+
+.coord_y{
+  color: white;
+  margin-left: 30px;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 10px #00ff10;
+  margin-top: -76px;
+}
+
+
+.follow_right{
+height: 2px;
+width: 100%;
+position: absolute;
+left: 10px;
+
+}
+.follow_left{
+height: 2px;
+width: 100%;
+position: absolute;
+left: -100%;
+transform: translate(-10px);
+
+}
+
+.follow_down{
+  width: 2px;
+  height: 800px;
+  position: absolute;
+  top: -800px;
+transform: translate(0px,-10px);}
+.body{
+  height: 100%;
+  user-select: none;
+  background: black;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  overflow: hidden;
+  cursor: none;
+
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+button{
+  font-family: Space Grunge;
+  cursor: none;
+
+}
+
+.cursor_text_password{
+
+  padding-right: 3px;
+  border-right: solid;
+  border-right-color: currentcolor;
+  border-right-width: medium;
+  border-right-width: medium;
+  border-color: white;
+  border-width: 0px;
+  color: #ffacac;
+  text-shadow: 0px 0px 10px #ff0f0f;
+  font-family: Space Grunge;
+  font-size: 100%;
+  height: 20px;
+  letter-spacing: 1px;
+  animation: blink-caret .75s step-end infinite;
+  font-size: 40px;
+  left: 64px;
+  top: 71px;
+  letter-spacing: 8px;
+  pointer-events: none;
+  position: absolute;
+
+
+}

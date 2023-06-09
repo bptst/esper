@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image centrée avec rideau</title>
+    <link href="style.css" rel="stylesheet"> </link>
+
+
+    <body class="body">
+
+      <div class='follow'>
+            <div class='follow_asset follow_up'></div>
+            <div class=' follow_asset follow_down'></div>
+            <div class='follow_asset follow_right'></div>
+            <div class=' follow_asset follow_left'></div>
+            <p class='coord_x'> x:100px</p>
+            <p class='coord_y'> x:100px</p>
+      </div>
+      <div class='selection'>
+
+        <p class='coord_x_selection'> 0</p>
+
+      </div>
+
+  <div class="reference">
+
+      <div class='fenetre'>
+
+        
+        <div class='popup open' id="img01">
+
+          <div class='header'>
+            <p class='title_header'>/img01</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <img class='filter_img' draggable="false" src='https://www.livreshebdo.fr/sites/default/files/styles/article_principal/public/assets/images/deckard_blade_runner.jpg?itok=U2j7Qdib'></img>
+            <div class="filter_green"></div>
+            
+          </div>
+        </div>
+
+        <div class='popup' id="color">
+
+          <div class='header'>
+            <p class='title_header'>/Color</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <input class='color_slider' id=input step=1 type="range" min=0 max=360 value=0>
+            <button class='random' onclick="random_color()">Random</button>
+          </div>
+        </div>
+
+
+        <div class='popup open' id="infos">
+          <div class='header'>
+            <p class='title_header'>/infos</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <div class="intro_text">
+              <p class='title typing small'> Hello World.</p>
+              <br>
+              <p class='title typing'> Welcome to <span class="command_style"> ESPER.</span></p>
+                    <br>
+        
+              <p class='title typing small'> Actually it is just my portfolio.</p>
+              </div>
+          </div>
+        </div>
+
+
+
+        <div class='popup' id="secret">
+          <div class='header'>
+            <p class='title_header'>/secret</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <textarea spellcheck="false" autofocus id="password_input"   maxlength="6" oninput="acutalise_password(this)" ></textarea>
+            <span class='cursor_text_password'></span>
+            <p class="psw_result anim_typing">No password...</p>
+
+    
+          </div>
+        </div>
+
+        <div class='popup first_view' id="terminal">
+
+          <div class='header'>
+            <p class='title_header'>/terminal</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <div id='terminal_window'>
+
+             <p class="typing">user12 : type  <span class="command_style">help</span> to see command </p>
+            </div>
+            <div class="tapping_zone">
+              <p class="pre_tapping">¥-user12 ></p>
+              <textarea maxlength="30" o spellcheck="false" id="terminal_input" oninput="acutalise_command_line(this.value)" onkeypress="submit_terminal(event)" ></textarea>
+              <span class='cursor_text'></span>
+              
+            </div>
+
+          </div>
+        </div>
+
+        <div class="icon secret" data-href="secret">
+          <img class='file' draggable="false" src='src/incon_file_lock.png'></img>
+          <div class="flair"></div>
+ 
+          <p class='file_name'>/secret</p>
+         </div>
+
+
+        <div class="icon infos" data-href="infos">
+         <img class='file' draggable="false" src='src/icon_file.png'></img>
+         <div class="flair"></div>
+         <p class='file_name'>/infos</p>
+        </div>
+
+        <div class="icon img01" data-href="img01">
+          <img class='file' draggable="false" src='src/icon_img.png'></img>
+          <div class="flair"></div>
+          <p class='file_name'>/img01</p>
+         </div>
+
+        <div class="icon terminal" data-href="terminal">
+          <img class='file' draggable="false" src='src/icon_terminal.png'></img>
+          <div class="flair"></div>
+          
+          <p class='file_name'>/terminal</p>
+         </div>
+
+        <div class="icon project" data-href="project">
+          <img class='file' draggable="false" src='src/icon_file.png'></img>
+          <div class="flair"></div>
+
+         <p class='file_name'>/project</p>
+        </div>
+
+        <div class="icon color" data-href="color">
+          <img class='file' draggable="false" src='src/icon_settings.png'></img>
+          <div class="flair"></div>
+
+         <p class='file_name'>/color</p>
+        </div>
+        
+
+      <audio class='audio_player'
+    src="src/bip.wav">
+</audio>
+    
+
+
+</div>
+</div>
+<div class='bg'></div>
+
+    </div>
+    </body>
+
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+
+  </html>
