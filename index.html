@@ -6,6 +6,14 @@
 
 
     <body class="body">
+    
+      <div class='window_header'>
+        <p class='title_header'>/window</p>
+        <p class="hour title_header" >12:30</p>
+      </div>
+      <div class="border_window">
+
+      </div>
 
       <div class='follow'>
             <div class='follow_asset follow_up'></div>
@@ -14,6 +22,7 @@
             <div class=' follow_asset follow_left'></div>
             <p class='coord_x'> x:100px</p>
             <p class='coord_y'> x:100px</p>
+            <div class="blob"></div>
       </div>
       <div class='selection'>
 
@@ -35,6 +44,8 @@
           <div class='content'>
             <img class='filter_img' draggable="false" src='https://www.livreshebdo.fr/sites/default/files/styles/article_principal/public/assets/images/deckard_blade_runner.jpg?itok=U2j7Qdib'></img>
             <div class="filter_green"></div>
+            <img  draggable='false' class="grid_overlay" src="src/grid_blue.png"></img>
+
             
           </div>
         </div>
@@ -81,6 +92,23 @@
             <span class='cursor_text_password'></span>
             <p class="psw_result anim_typing">No password...</p>
 
+    
+          </div>
+        </div>
+
+        <div class='popup' id="project">
+          <div class='header'>
+            <p class='title_header'>/project</p>
+            <button class='close' onclick="close_popup(this)">X</button>
+          </div>
+          <div class='content'>
+            <div class="wrapper_project_1">
+              <img class='project_img' draggable="false" src='src/demo_map.png'></img>
+              <div class="filter_green"></div>
+            </div>
+            <p>Counrty Quizz</p>
+
+            
     
           </div>
         </div>

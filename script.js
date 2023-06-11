@@ -234,25 +234,28 @@ function getRandomInt(max) {
 
 
 document.addEventListener('mousemove', e => {
-  if( audio_player.paused){
-    audio_player.play()
-    mousse_follow.style.opacity=1
-    }else{
-        audio_player.currentTime=0
-          }
-   mousse_x=e.clientX
-   mousse_y=e.clientY
+  mousse_x=e.clientX
+  mousse_y=e.clientY
+  if (mousse_y>35){
+    if( audio_player.paused){
+      audio_player.play()
+      mousse_follow.style.opacity=1
+      }else{
+          audio_player.currentTime=0
+            }
 
-  mouve_follow()
 
-  if (is_selecting  && dragging==false && dragging_popup==false){
-     draw_selecion()
+    mouve_follow()
+
+    if (is_selecting  && dragging==false && dragging_popup==false){
+      draw_selecion()
+      }
+    if (dragging){
+      move_drag()
     }
-  if (dragging){
-    move_drag()
-  }
-  if (dragging_popup){
-    move_drag_popup()
+    if (dragging_popup){
+      move_drag_popup()
+    }
   }
 
 })
@@ -279,52 +282,10 @@ function random_color(){
 }
 
 
-function file_clicked(){
-     const icon=event.target.parentNode
-
-
-      if (event.detail == 2) {
-        const href=icon.dataset['href']
-        open_popup(href)
-      }
-
-      const test=Array.prototype.slice.call(document.getElementsByClassName('selected'))
-
-      icon.classList.add("selected")
-
-      if (test.length==1){
-        console.log('uno')
-        target_dragging.classList.remove('selected')
-
-    }
-
-      const dragable_list=Array.prototype.slice.call(document.getElementsByClassName('selected'))
-      dragable_list.forEach((item, i) => {
-          
-        initial_pose.push([item.getClientRects()[0].x,item.getClientRects()[0].y])
-      })
-      dragging=true
-      
-
-      target_dragging_pose=[mousse_x,mousse_y]
-
-
-        target_dragging=icon
-
-        console.log(initial_pose)
-
-
-
-
-}
-
 var initial_drag_popup=[0,0]
 
-function put_front(popup){
-  document.getElementsByClassName('first_view')[0].classList.remove('first_view')
-  popup.classList.add('first_view')
 
-}
+var old_translation_x=0
 window.addEventListener('mousedown', event => {
   if (event.target.classList[0]=='header'){
 
@@ -339,6 +300,8 @@ window.addEventListener('mousedown', event => {
     file_clicked()
 
   }
+
+  console.log(event)
   if (event.target.classList[0]=='fenetre'){
     target=[mousse_x,mousse_y]
     is_selecting=true

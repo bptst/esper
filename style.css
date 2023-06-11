@@ -71,6 +71,7 @@ position: absolute;
 bottom: 0;
 display: flex;
 margin-left: 10px;
+position: fixed;
 }
 .command_style{
   color: #ffacac;
@@ -133,8 +134,8 @@ textarea{
   text-shadow: 0px 0px 10px #00ff10;
   padding: 10px;
   position: absolute;
-  top: 159px;
-  left: 78px;
+  bottom: 10px;
+    left: 78px;
 }
 #password_input{
   background: no-repeat;
@@ -158,6 +159,26 @@ textarea{
   
 
 
+}
+
+.window_header{
+  margin: 2px;
+  height: 31px;
+  z-index: 999999999;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  background-color: rgb(29, 41, 29);
+  width: 100%;
+  border: solid;
+  border-color:  rgb(170, 252, 172);
+  border-width: 1px;
+  display: flex;
+  justify-content: space-between; 
+  box-shadow: 0px 0px 10px 2px #00ff10;
+  margin: 2px;
 }
 #password_input:focus{
   background-color: #00ff105c;
@@ -184,7 +205,6 @@ textarea{
   border-width: 1px;
   display: flex;
   justify-content: space-between; 
-  background-color: #25462300;
 }
 .open{
 background-color: #00ff10;
@@ -195,6 +215,10 @@ transform: scale(1) !important;
 justify-content: center;
 gap: 40px;
 letter-spacing: 1px;
+overflow: hidden;
+position: relative;
+width: 100%;
+height: 100%;
 
 }
 .anim_typing{
@@ -219,6 +243,7 @@ border: solid;
 border-width: 1px;
 box-shadow: 0px 0px 10px 2px #00ff10;
 border-radius: 3px;
+margin-bottom: 47px;
 }
 .random:hover{
   background-color: #00ff105c;
@@ -237,6 +262,7 @@ border-radius: 3px;
   transform: scale(0);
   border-radius: 4px;
   border-width: 1px;
+  overflow: hidden;
 }
 
 .infos{
@@ -430,6 +456,15 @@ top: 10px;
   position: absolute;
 }
 
+.wrapper_project_1{
+  width: 500px;
+}
+.project_img{
+  filter: grayscale(1) brightness(1.2);
+width: 100%;
+
+}
+
 .follow_asset{
   background-color: white;
   box-shadow: 0px 0px 10px 2px #00ff10;
@@ -442,7 +477,8 @@ left: 0;
 background-color: #00800054;
 width: 100%;
 height: 100%;
-z-index: -1;
+pointer-events: none;
+z-index: 0;
 }
 .filter_img{
   z-index: -10;
@@ -456,6 +492,7 @@ z-index: -1;
   top: 60px;
   left: 785px;
   width: 800px;;
+  height: 570px;
 }
 .img01{
   top: 260px;
@@ -522,8 +559,23 @@ transform: translate(0px,-10px);}
   padding: 0;
   justify-content: center;
   overflow: hidden;
-  cursor: none;
+  width: 100%;
+  position: fixed;
 
+}
+.hour{
+margin-right: 20px;
+}
+
+.border_window{
+  box-shadow: inset 0px 0px 1px 1px #fff,inset 0px 0px 10px 2px #00ff10;z-index: 999999999;
+width: 100%;
+height: 100%;
+max-width: 1920px;
+max-height: 1080px;
+
+position: fixed;
+pointer-events: none;
 }
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -533,6 +585,17 @@ button{
   cursor: none;
 
 }
+
+.grid_overlay{
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin-top: -13px;
+  opacity: 0.3;
+}
+
 
 .cursor_text_password{
 
@@ -552,7 +615,7 @@ button{
   animation: blink-caret .75s step-end infinite;
   font-size: 40px;
   left: 64px;
-  top: 71px;
+  top: 41px;
   letter-spacing: 8px;
   pointer-events: none;
   position: absolute;
