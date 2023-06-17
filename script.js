@@ -83,7 +83,6 @@ function acutalise_password(elem){
 
   if (value.length >= 6){
     if (value==password){
-      console.log('bon mdp')
       document.getElementsByClassName('psw_result')[0].innerText='Good Password...'
       document.getElementsByClassName('psw_result')[0].classList.remove('anim_typing')
       document.getElementsByClassName('psw_result')[0].offsetWidth
@@ -92,7 +91,6 @@ function acutalise_password(elem){
       document.getElementsByClassName('cursor_text_password')[0].innerText=''
 
     }else{
-      console.log('wrong msp')
       document.getElementsByClassName('psw_result')[0].innerText='Wrong Password...'
       document.getElementsByClassName('psw_result')[0].classList.remove('anim_typing')
       document.getElementsByClassName('psw_result')[0].offsetWidth
@@ -139,7 +137,7 @@ function submit_terminal(event){
           `
         break;
       case 'ls':
-        to_send='<span>. /color <br>. /infos <br>. /hidden <br>. /terminal <br> . /secret</span></p>'
+        to_send='<span>. /color <br>. /infos <br>. /hidden <br>. /terminal <br> . /secret  <br> . /project</span></p>'
         break;
       case 'open /':
           try {
@@ -301,7 +299,6 @@ window.addEventListener('mousedown', event => {
 
   }
 
-  console.log(event)
   if (event.target.classList[0]=='fenetre'){
     target=[mousse_x,mousse_y]
     is_selecting=true

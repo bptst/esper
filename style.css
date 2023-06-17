@@ -28,6 +28,9 @@
 }
 p{
   font-family: Space Grunge;
+  text-shadow: 0px 0px 10px #00ff10;
+
+  color: white;
 
 }
 .terminal{
@@ -35,13 +38,19 @@ p{
   top: 500px;
 }
 .project{
-  left: 750px;
+  left: 1000px;
   top: 400px;
 
 
 }
+#project{
+  top: 60px;
+  left: 785px;
+  width: 800px;;
+  height: 570px;
+}
 .secret{
-  left: 900px;
+  left: 850px;
   top: 500px;
 
 
@@ -218,6 +227,7 @@ letter-spacing: 1px;
 overflow: hidden;
 position: relative;
 width: 100%;
+overflow: auto;
 height: 100%;
 
 }
@@ -244,6 +254,29 @@ border-width: 1px;
 box-shadow: 0px 0px 10px 2px #00ff10;
 border-radius: 3px;
 margin-bottom: 47px;
+}
+.demo{
+  margin-right: 10px;
+  background: no-repeat;
+  color: white;
+  text-shadow: 0px 0px 10px #00ff10;
+  font-family: Space Grunge;
+  font-size: 30px;
+  border: solid;
+  border-width: 1px;
+  box-shadow: 0px 0px 10px 2px #00ff10;
+  border-radius: 3px;
+  margin-left: 36%;
+  margin-bottom: 47px;
+  padding: 5px 10px 10px 10px;
+  border-radius: 10px;
+}
+.content {
+  letter-spacing: 1px;
+
+}
+.demo:hover{
+  background-color: #00ff105c;
 }
 .random:hover{
   background-color: #00ff105c;
@@ -456,13 +489,18 @@ top: 10px;
   position: absolute;
 }
 
-.wrapper_project_1{
-  width: 500px;
+.wrapper_project{
+  display: flex;
+width: 100%;
+border-bottom: solid;
+
+border-color: #2cff00;
+border-width: 1px;
 }
 .project_img{
-  filter: grayscale(1) brightness(1.2);
-width: 100%;
-
+  width: 400px;
+  object-fit: contain;
+  height: 200px;
 }
 
 .follow_asset{
@@ -495,9 +533,8 @@ z-index: 0;
   height: 570px;
 }
 .img01{
-  top: 260px;
-  left: 1000px;
-
+  left: 750px;
+  top: 500px;
 }
 .coord_x{
   color: white;
